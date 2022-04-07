@@ -148,22 +148,22 @@ int main(void){
      //     printf("\n");
      //     scanf(" %d%d%d%d",&row1, &col1, &row2, &col2);
          
-     //     swapValue(row1, row2, col1, col2);
+         // swapValue(row1, row2, col1, col2);
 
-     //     //Check one position
-     //     win = checkIfValid(row1, col1);
-     //     //Check the other position
-     //     if(win == false){
-     //         win = checkIfValid(row2, col2);
-     //     }
+         // //Check one position
+         // win = checkIfValid(row1, col1);
+         // //Check the other position
+         // if(win == false){
+         //     win = checkIfValid(row2, col2);
+         // }
          
-     //     if(win == false){
-     //         //Swap Back
-     //         swapValue(row2, row1, col2, col1);
-     //         printf("Wrong move!\n");
-     //     }else{
-     //         printf("Excellent!\n");
-     //     }
+         // if(win == false){
+         //     //Swap Back
+         //     swapValue(row2, row1, col2, col1);
+         //     printf("Wrong move!\n");
+         // }else{
+         //     printf("Excellent!\n");
+         // }
      // }
 	//draw_text(20, 80, "Diamond!");
 	drawAllDiamonds();
