@@ -903,7 +903,7 @@ int main(void) {
     *(pixel_ctrl_ptr + 1) = SDRAM_BASE;
     pixel_buffer_start = *(pixel_ctrl_ptr + 1); // we draw on the back buffer
     init_screen(); // pixel_buffer_start points to the pixel buffer
-
+	
     int currentPos[] = {0,0}; 
     while (1)   {
         if ((currentPos[0] != position[0] || currentPos[1] != position[1]) || drawn!=2) {
@@ -1498,6 +1498,9 @@ bool checkIfValid(int row, int col){
         row1 = row;
         row2 = row;
         score += clearDiamond(row1, row2, col1, col2);
+        if(score >= 100){
+        	score -= 100;
+        }
         return true;
     }
     //printf("5\n");
@@ -1526,6 +1529,9 @@ bool checkIfValid(int row, int col){
         col2 = col;
         row2 = i - 1;
         score += clearDiamond(row1, row2, col1, col2);
+        if(score >= 100){
+        	score -= 100;
+        }
         return true;
     }
 
@@ -1607,6 +1613,9 @@ bool checkDiamondAndClear(){
             win = checkIfValid(i, j);
             if(win == true){
                 int count = score;
+                if(score >= 100){
+		        	score -= 100;
+		        }
                 int count_2 = 0;
                  while(count >= 10){
                     count -= 10;
@@ -1614,6 +1623,7 @@ bool checkDiamondAndClear(){
                  }
                  *HEX3_ptr = seg7[count_2]<< 8 | seg7[count];
                 *LEDR_BASE_PTR = score;
+
                 return true;
             }
             win = false;
