@@ -1792,7 +1792,7 @@ void automaticPlay(){
             	printf("Score: ");
           		printf("%d", score);
          		printf("\n");
-				int count = score;
+				int count = score;t
 				int count_2 = 0;
 				 while(count >= 10){
 					count -= 10;
